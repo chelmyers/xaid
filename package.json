@@ -1,0 +1,14 @@
+{
+  "name": "xaid",
+  "version": "1.0.0",
+  "description": "Helping non-experts understand neural network bias.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "material-design-lite": "^1.3.0"
+  }
+}

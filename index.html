@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Neural Networks Decide</title>
+
+  <!-- MATERIAL LIBRARY -->
+  <!-- https://getmdl.io/ -->
+  <!-- custom colors at https://getmdl.io/customize/index.html -->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css">
+  <script src="node_modules/material-design-lite/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" type="text/css" href="a/c/styles.css">
+
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <section class="mdl-grid header">
+
+      <!-- MAIN TITLE -->
+      <div class="mdl-cell mdl-cell--6-col title-main">
+        <h1>What Influences a Neural Network for</h1>
+        <h3><span class="dataset">Loan Applicants</span>?</h3>
+      </div>
+
+
+      <!-- FEATURES -->
+      <div class="mdl-cell mdl-cell--8-col">
+        <h4>The NN consists of <span class="nn-swap">11 features</span></h4>
+
+        <div class="button-container">
+          <button class="mdl-button mdl-js-button mdl-button--raised">Loan Amount</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised">Loam Amount Term</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised">Income</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised">Co-Applicant Income</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised">Credit History</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised">Gender</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised">Married</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised">Education</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised">Property Area</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised">Dependents</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised">Self-Employed</button>
+        </div>
+      </div>
+
+      <div class="mdl-cell mdl-cell--8-col">
+        <h4>The NN splits applicants into <span class="nn-swap">5 groups</span> based on their similarities</h4>
+        <div class="button-container">
+          <button class="mdl-button mdl-js-button mdl-button--raised txt-reversed" data-color="purple">Purple</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised txt-reversed" data-color="pink">Pink</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised txt-reversed" data-color="black">Black</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised txt-reversed" data-color="red">Red</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised txt-reversed" data-color="orange">Orange</button>
+        </div>
+      </div>
+
+    </section> <!-- END HEADER-->
+
+
+    <!-- SPLIT -->
+    <section class="split">
+
+
+      <div class="mdl-grid center">
+        <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp select-feature-container">
+
+          <div class="mdl-card__supporting-text">
+            <h5>Let's look to see how a feature influences the NN's decision on acceptance and rejection. Pick a feature below to compare what happens to applicants when we change it.</h5>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <select>
+                <option value="Gender">Gender</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- HEADERS SPLIT -->
+      <div class="mdl-grid">
+
+        <div class="card-header mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__supporting-text">
+            <h5>Original Gender</h5>
+          </div>
+        </div>
+
+
+        <div class="card-header mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__supporting-text">
+            <h5>Swapped Gender</h5>
+          </div>
+        </div>
+
+
+      </div> <!-- HEADERS SPLIT END-->
+
+
+
+
+      <div class="mdl-grid center">
+
+        <div class="card-header mdl-cell mdl-cell--4-col mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__supporting-text">
+            <h6>How close do the groups get to be accepted or rejected?</h6>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="mdl-grid center">
+        <div class="mdl-cell mdl-cell--4-col ">
+          <h5>*insert average chart*</h5>
+        </div>
+      </div>
+
+
+
+      <div class="mdl-grid center">
+
+        <div class="card-header mdl-cell mdl-cell--4-col mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__supporting-text">
+            <h6>Let's compare how the groups change.</h6>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="mdl-grid center">
+        <div class="mdl-cell mdl-cell--1-col">
+          <label for="switch1" class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+            <input type="checkbox" id="switch1" class="mdl-switch__input">
+            <span class="mdl-switch__label"></span>
+          </label>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- HEADERS SPLIT -->
+      <div class="mdl-grid">
+
+        <div class="card-header mdl-cell mdl-cell--5-col mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__supporting-text">
+            <h5>Original Gender</h5>
+          </div>
+        </div>
+
+
+        <div class="card-header mdl-cell mdl-cell--2-col mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__supporting-text">
+            <h5>Applicant Key</h5>
+            <ul>
+              <li>Accepted</li>
+              <li>Rejected</li>
+              <li>Female</li>
+              <li>Male</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="card-header mdl-cell mdl-cell--5-col mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__supporting-text">
+            <h5>Swapped Gender</h5>
+          </div>
+        </div>
+
+
+      </div> <!-- HEADERS SPLIT END-->
+
+
+      <div class="mdl-grid center">
+        <div class="mdl-cell mdl-cell--4-col ">
+          <h5>*insert charts*</h5>
+        </div>
+      </div>
+
+
+
+    </section> <!-- END SPLIT-->
+
+
+
+
+
+
+
+  </div>
+
+
+
+</body>
+</html>

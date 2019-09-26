@@ -1,0 +1,73 @@
+/* LAYOUT */
+.header, .split, .center {
+  text-align: center;
+  justify-content: center;
+}
+
+
+
+/* TYPE */
+.nn-swap {
+  font-weight: bold;
+}
+
+.txt-reversed {
+  color: white;
+}
+
+/* CLUSTER COLORS */
+[data-color="purple"] {
+  background-color: purple;
+}
+
+[data-color="red"] {
+  background-color: red;
+}
+
+[data-color="pink"] {
+  background-color: pink;
+}
+
+[data-color="orange"] {
+  background-color: orange;
+}
+
+[data-color="black"] {
+  background-color: black;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+
+
+/* SPLIT */
+.split {
+  background-color: #dbdddd;
+  position: relative;
+  z-index: -1;
+}
+
+.split:after {
+  content: "";
+  display: block;
+  width: 10px; /*set width of line in middle*/
+  height: 100%;
+  background-color: white; /*color of line*/
+
+  position: absolute;
+  top:0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+
+
+
+/* CARDS */
+.card-header {
+  min-height: auto;
+}
